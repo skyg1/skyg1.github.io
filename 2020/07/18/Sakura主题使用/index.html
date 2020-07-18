@@ -245,6 +245,20 @@
                         </a>
                       </li>
                     
+                      <li>
+                        <a href="/categories/Java/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          Java
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/数据库/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          数据库
+                        </a>
+                      </li>
+                    
                   </ul>
                 
               </li>
@@ -448,6 +462,43 @@ git push
 <h4 id="5-单页面封面配置"><a href="#5-单页面封面配置" class="headerlink" title="5.单页面封面配置"></a>5.单页面封面配置</h4><p>如留言板页面页面，位于source下的comment下，打开index.md：<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者单页面封面配置</a></p>
 <h4 id="6-各单页面配置"><a href="#6-各单页面配置" class="headerlink" title="6.各单页面配置"></a>6.各单页面配置</h4><p>对source下各个菜单内容的配置：<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者单页面配置</a></p>
 <h4 id="7-写文章配置"><a href="#7-写文章配置" class="headerlink" title="7.写文章配置"></a>7.写文章配置</h4><p>主题集成了个人插件hexo-tag-bili和hexo-tag-fancybox_img。<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者写文章配置</a></p>
+<h2 id="三、个人理解总结"><a href="#三、个人理解总结" class="headerlink" title="三、个人理解总结"></a>三、个人理解总结</h2><ul>
+<li><p>博客所有的资源文件(图片，歌曲和视频等)都是通过URL链接从别处的服务器获取使用的，可以在github自建CDN库,以jsDeliver要求的格式 <a href="https://cdn.jsdelivr.net/gh/user/repo@version/file" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/user/repo@version/file</a>  直接获取使用。</p>
+</li>
+<li><p>CDN库使用(github库就是用这种方式通过git更新库)：</p>
+<ol>
+<li>github自建一个命名为cdn的库；</li>
+<li>本地新建文件，在文件目录下，执行命令：<pre><code>git clone cdn的clone地址信息
+</code></pre>之后就会出现本地cdn仓库文件.</li>
+<li>在本地cdn仓库文件目录下，修改添加资源后，<br>执行命令：<pre><code>git status
+git add .   //注意最后的&#39;.&#39;表示上传所有文件
+git commit -m &quot;提交的备注信息&quot;
+git push
+</code></pre>就将本地所有文件信息上传到github库中。</li>
+</ol>
+</li>
+<li><p>主题大致修改两个_config.xml（一个在博客根目录下，一个在主题目录下）和一些Page页面的Index.md文件和languages文件夹下的zn_ch.yml文件：</p>
+<ol>
+<li>博客根目录_config.xml核心配置文件：<br>主要注意site信息设置，theme设置和deploy设置。</li>
+<li>主题目录_config,xml主题配置文件（大量使用jsDeliver格式的URL设置资源）：<ul>
+<li>site信息设置</li>
+<li>cdn站点要注意设置好相应的版本</li>
+<li>mune菜单下的页面设置（菜单名称，菜单链接路径，菜单图标）<br><code>`</code></li>
+</ul>
+<ol>
+<li>菜单名称显示：经由主题的语言文件里面的yml文件转换为对应中文再显示</li>
+<li>菜单链接路径：指向source下的新建的各种Page文件夹里面的index.md</li>
+<li>菜单图标：单独设置<br><code>`</code></li>
+</ol>
+</li>
+<li>Index.md文件使用：要<strong>严格注意空格等形式的规则</strong>，否则在hexo g不会生成public里面的同名目录下的index.html文件或者报错。</li>
+<li>hexo主题:<pre><code>1. languages文件夹：包含中文语言转换的yml文件，此yml文件还包含分类页标签页建立
+2. layout文件夹：包含大量的ejs模板文件
+3. source文件夹: 包含主题使用的js,cs,资源文件。
+</code></pre></li>
+</ol>
+</li>
+</ul>
 <hr>
 <p>参考博客地址：<br>1.<a href="https://flymc.cc/2020/03/28/Sakura/" target="_blank" rel="noopener">https://flymc.cc/2020/03/28/Sakura/</a><br>2.<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">https://www.jianshu.com/p/06f7814d815b</a><br>3.<a href="https://www.cnblogs.com/TRHX/p/11699996.html" target="_blank" rel="noopener">https://www.cnblogs.com/TRHX/p/11699996.html</a></p>
 
@@ -731,6 +782,20 @@ $(document).ready(function() {
                 <a href="/categories/转载/">
                   <i class="fa fa-book" aria-hidden="true"></i>
                   转载
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/Java/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  Java
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/数据库/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  数据库
                 </a>
               </li>
             
