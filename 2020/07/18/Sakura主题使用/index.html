@@ -75,7 +75,7 @@
         <a href="https://skyg1.github.io">
           <img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/avatar.jpg">
         </a>
-      </div>
+       </div>
       <div class="header-info">
         <p>Live your life with passion! With some drive!</p>
         <div class="top-social_v2">
@@ -323,6 +323,16 @@
               </li>
             
               <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
                 <a href="/donate/">
                   <span class="faa-parent animated-hover">
                     <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
@@ -364,6 +374,16 @@
                       </li>
                     
                   </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/client/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+                    客户端
+                  </span>
+                </a>
                 
               </li>
             
@@ -421,50 +441,16 @@
         
         <div class="entry-content">
           <p>#Sakura主题的使用前准备</p>
-<h2 id="一、免费CDN：jsDelivr-Github-使用方法："><a href="#一、免费CDN：jsDelivr-Github-使用方法：" class="headerlink" title="一、免费CDN：jsDelivr+Github 使用方法："></a>一、免费CDN：jsDelivr+Github 使用方法：</h2><h4 id="1-新建一个命名为cdn的存放资源的github仓库"><a href="#1-新建一个命名为cdn的存放资源的github仓库" class="headerlink" title="1.新建一个命名为cdn的存放资源的github仓库"></a>1.新建一个命名为cdn的存放资源的github仓库</h4><h4 id="2-在本地目录下新建空文件使用git-bash-here命令行下面执行命令："><a href="#2-在本地目录下新建空文件使用git-bash-here命令行下面执行命令：" class="headerlink" title="2.在本地目录下新建空文件使用git bash here命令行下面执行命令："></a>2.在本地目录下新建空文件使用git bash here命令行下面执行命令：</h4><pre><code> git clone 上面仓库Clone的URL(点击code弹出的可复制的地址)
-</code></pre><p>  将仓库中的文件克隆到本地该目录下。</p>
-<h4 id="3-添加或者修改文件内容"><a href="#3-添加或者修改文件内容" class="headerlink" title="3.添加或者修改文件内容"></a>3.添加或者修改文件内容</h4><h4 id="4-执行下面命令，将本地的修改后克隆仓库推到github上"><a href="#4-执行下面命令，将本地的修改后克隆仓库推到github上" class="headerlink" title="4.执行下面命令，将本地的修改后克隆仓库推到github上"></a>4.执行下面命令，将本地的修改后克隆仓库推到github上</h4><pre><code>git status                    //查看状态
-git add .                     //添加所有文件到暂存区
-git commit -m &#39;第一次提交&#39;     //把文件提交到仓库
-git push                      //推送至远程仓库
-</code></pre><h4 id="5-release仓库，自定义版本号"><a href="#5-release仓库，自定义版本号" class="headerlink" title="5.release仓库，自定义版本号"></a>5.release仓库，自定义版本号</h4><p>进入github上的仓库，点击release发布，自定义发布版本号。</p>
-<h4 id="6-通过jsDelivr引用资源"><a href="#6-通过jsDelivr引用资源" class="headerlink" title="6.通过jsDelivr引用资源"></a>6.通过jsDelivr引用资源</h4><pre><code>使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
-例如：
-
-https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png
-https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css
-https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4
-注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：
-
-// 加载任何Github发布、提交或分支
-https://cdn.jsdelivr.net/gh/user/repo@version/file
-
-// 加载 jQuery v3.2.1
-https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js
-
-// 使用版本范围而不是特定版本
-https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js
-https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js
-
-// 完全省略该版本以获取最新版本
-https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js
-
-// 将“.min”添加到任何JS/CSS文件中以获取缩小版本，如果不存在，将为会自动生成
-https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js
-
-// 在末尾添加 / 以获取资源目录列表
-https://cdn.jsdelivr.net/gh/jquery/jquery/
-</code></pre><hr>
+<h2 id="一、免费CDN：jsDelivr-Github-使用方法："><a href="#一、免费CDN：jsDelivr-Github-使用方法：" class="headerlink" title="一、免费CDN：jsDelivr+Github 使用方法："></a>一、免费CDN：jsDelivr+Github 使用方法：</h2><h4 id="1-新建一个命名为cdn的存放资源的github仓库"><a href="#1-新建一个命名为cdn的存放资源的github仓库" class="headerlink" title="1.新建一个命名为cdn的存放资源的github仓库"></a>1.新建一个命名为cdn的存放资源的github仓库</h4><h4 id="2-在本地目录下新建空文件使用git-bash-here命令行下面执行命令："><a href="#2-在本地目录下新建空文件使用git-bash-here命令行下面执行命令：" class="headerlink" title="2.在本地目录下新建空文件使用git bash here命令行下面执行命令："></a>2.在本地目录下新建空文件使用git bash here命令行下面执行命令：</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone 上面仓库Clone的URL(点击code弹出的可复制的地址)</span><br></pre></td></tr></table></figure>
+<p>  将仓库中的文件克隆到本地该目录下。</p>
+<h4 id="3-添加或者修改文件内容"><a href="#3-添加或者修改文件内容" class="headerlink" title="3.添加或者修改文件内容"></a>3.添加或者修改文件内容</h4><h4 id="4-执行下面命令，将本地的修改后克隆仓库推到github上"><a href="#4-执行下面命令，将本地的修改后克隆仓库推到github上" class="headerlink" title="4.执行下面命令，将本地的修改后克隆仓库推到github上"></a>4.执行下面命令，将本地的修改后克隆仓库推到github上</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status                    //查看状态</span><br><span class="line">git add .                     //添加所有文件到暂存区</span><br><span class="line">git commit -m &apos;第一次提交&apos;     //把文件提交到仓库</span><br><span class="line">git push                      //推送至远程仓库</span><br></pre></td></tr></table></figure>
+<h4 id="5-release仓库，自定义版本号"><a href="#5-release仓库，自定义版本号" class="headerlink" title="5.release仓库，自定义版本号"></a>5.release仓库，自定义版本号</h4><p>进入github上的仓库，点击release发布，自定义发布版本号。</p>
+<h4 id="6-通过jsDelivr引用资源"><a href="#6-通过jsDelivr引用资源" class="headerlink" title="6.通过jsDelivr引用资源"></a>6.通过jsDelivr引用资源</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">使用方法：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径</span><br><span class="line">例如：</span><br><span class="line"></span><br><span class="line">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@1.0/images/trhx.png</span><br><span class="line">https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@2.0.1/css/style.css</span><br><span class="line">https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.3//The%20Pet%20Girl%20of%20Sakurasou.mp4</span><br><span class="line">注意：版本号不是必需的，是为了区分新旧资源，如果不使用版本号，将会直接引用最新资源，除此之外还可以使用某个范围内的版本，查看所有资源等，具体使用方法如下：</span><br><span class="line"></span><br><span class="line">// 加载任何Github发布、提交或分支</span><br><span class="line">https://cdn.jsdelivr.net/gh/user/repo@version/file</span><br><span class="line"></span><br><span class="line">// 加载 jQuery v3.2.1</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/dist/jquery.min.js</span><br><span class="line"></span><br><span class="line">// 使用版本范围而不是特定版本</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2/dist/jquery.min.js</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3/dist/jquery.min.js</span><br><span class="line"></span><br><span class="line">// 完全省略该版本以获取最新版本</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery/dist/jquery.min.js</span><br><span class="line"></span><br><span class="line">// 将“.min”添加到任何JS/CSS文件中以获取缩小版本，如果不存在，将为会自动生成</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery@3.2.1/src/core.min.js</span><br><span class="line"></span><br><span class="line">// 在末尾添加 / 以获取资源目录列表</span><br><span class="line">https://cdn.jsdelivr.net/gh/jquery/jquery/</span><br></pre></td></tr></table></figure>
+<hr>
 <h2 id="二、Sakura主题使用简略版（详细的请看上一篇）"><a href="#二、Sakura主题使用简略版（详细的请看上一篇）" class="headerlink" title="二、Sakura主题使用简略版（详细的请看上一篇）"></a>二、Sakura主题使用简略版（详细的请看上一篇）</h2><h5 id="1-下载Sakura主题-并且将其解压在hexo的根目录下"><a href="#1-下载Sakura主题-并且将其解压在hexo的根目录下" class="headerlink" title="1.下载Sakura主题,并且将其解压在hexo的根目录下"></a>1.下载Sakura主题,并且将其解压在hexo的根目录下</h5><p><a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" rel="noopener">hexo-theme-sakura</a><br>tips:<br>注意是根目录，而非主题目录</p>
-<h4 id="2-修改hexo博客根目录下的-config配置"><a href="#2-修改hexo博客根目录下的-config配置" class="headerlink" title="2.修改hexo博客根目录下的_config配置"></a>2.修改hexo博客根目录下的_config配置</h4><p>（1）site信息<br>（2）deploy信息</p>
-<pre><code>  1.主要设置自己的博客部署仓库地址
-  2.备份仓库，为上面仓库的分支，hexo b 发布备份
-</code></pre><h4 id="3-修改Sakura主题目录下的-config配置"><a href="#3-修改Sakura主题目录下的-config配置" class="headerlink" title="3.修改Sakura主题目录下的_config配置"></a>3.修改Sakura主题目录下的_config配置</h4><p>详见上一篇，这里要说明一下，我是直接fork了 Sakura主题作者的cdn仓库：github.com/honjun/cdn。<br>由于jsDeliver的使用格式固定，这样，对于里面资源文件地址修改只需更改cdn的用户名为我自己的就ok啦！<br>同时，对于以后的替换，我只需clone下cdn仓库，替换修改后再执行</p>
-<pre><code>git status
-git add .
-git commit -m &quot;描述的提交信息&quot;
-git push
-</code></pre><p>发布到我的cdn仓库即可完成博客的修改。</p>
+<h4 id="2-修改hexo博客根目录下的-config配置"><a href="#2-修改hexo博客根目录下的-config配置" class="headerlink" title="2.修改hexo博客根目录下的_config配置"></a>2.修改hexo博客根目录下的_config配置</h4><p>（1）site信息<br>（2）deploy信息<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1.主要设置自己的博客部署仓库地址</span><br><span class="line">2.备份仓库，为上面仓库的分支，hexo b 发布备份</span><br></pre></td></tr></table></figure></p>
+<h4 id="3-修改Sakura主题目录下的-config配置"><a href="#3-修改Sakura主题目录下的-config配置" class="headerlink" title="3.修改Sakura主题目录下的_config配置"></a>3.修改Sakura主题目录下的_config配置</h4><p>详见上一篇，这里要说明一下，我是直接fork了 Sakura主题作者的cdn仓库：github.com/honjun/cdn。<br>由于jsDeliver的使用格式固定，这样，对于里面资源文件地址修改只需更改cdn的用户名为我自己的就ok啦！<br>同时，对于以后的替换，我只需clone下cdn仓库，替换修改后再执行<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add .</span><br><span class="line">git commit -m &quot;描述的提交信息&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
+<p>发布到我的cdn仓库即可完成博客的修改。</p>
 <h4 id="4-分类页和标签页配置"><a href="#4-分类页和标签页配置" class="headerlink" title="4.分类页和标签页配置"></a>4.分类页和标签页配置</h4><p>配置项在\themes\Sakura\languages\zh-cn.yml里<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者分类页与标签页配置</a></p>
 <h4 id="5-单页面封面配置"><a href="#5-单页面封面配置" class="headerlink" title="5.单页面封面配置"></a>5.单页面封面配置</h4><p>如留言板页面页面，位于source下的comment下，打开index.md：<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者单页面封面配置</a></p>
 <h4 id="6-各单页面配置"><a href="#6-各单页面配置" class="headerlink" title="6.各单页面配置"></a>6.各单页面配置</h4><p>对source下各个菜单内容的配置：<br>详见<a href="https://www.jianshu.com/p/06f7814d815b" target="_blank" rel="noopener">原作者单页面配置</a></p>
@@ -475,34 +461,31 @@ git push
 <li><p>CDN库使用(github库就是用这种方式通过git更新库)：</p>
 <ol>
 <li>github自建一个命名为cdn的库；</li>
-<li>本地新建文件，在文件目录下，执行命令：<pre><code>git clone cdn的clone地址信息
-</code></pre>之后就会出现本地cdn仓库文件.</li>
-<li>在本地cdn仓库文件目录下，修改添加资源后，<br>执行命令：<pre><code>git status
-git add .   //注意最后的&#39;.&#39;表示上传所有文件
-git commit -m &quot;提交的备注信息&quot;
-git push
-</code></pre>就将本地所有文件信息上传到github库中。</li>
+<li>本地新建文件，在文件目录下，执行命令：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git clone cdn的clone地址信息</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>之后就会出现本地cdn仓库文件.</p>
+<ol start="3">
+<li>在本地cdn仓库文件目录下，修改添加资源后，<br>执行命令：<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git status</span><br><span class="line">git add .   //注意最后的&apos;.&apos;表示上传所有文件</span><br><span class="line">git commit -m &quot;提交的备注信息&quot;</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>就将本地所有文件信息上传到github库中。</p>
 </li>
 <li><p>主题大致修改两个_config.xml（一个在博客根目录下，一个在主题目录下）和一些Page页面的Index.md文件和languages文件夹下的zn_ch.yml文件：</p>
 <ol>
 <li>博客根目录_config.xml核心配置文件：<br>主要注意site信息设置，theme设置和deploy设置。</li>
-<li>主题目录_config,xml主题配置文件（大量使用jsDeliver格式的URL设置资源）：<ul>
+<li><p>主题目录_config,xml主题配置文件（大量使用jsDeliver格式的URL设置资源）：</p>
+<ul>
 <li>site信息设置</li>
 <li>cdn站点要注意设置好相应的版本</li>
-<li>mune菜单下的页面设置（菜单名称，菜单链接路径，菜单图标）<br><code>`</code></li>
-</ul>
-<ol>
-<li>菜单名称显示：经由主题的语言文件里面的yml文件转换为对应中文再显示</li>
-<li>菜单链接路径：指向source下的新建的各种Page文件夹里面的index.md</li>
-<li>菜单图标：单独设置<br><code>`</code></li>
-</ol>
+<li>mune菜单下的页面设置（菜单名称，菜单链接路径，菜单图标）<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 菜单名称显示：经由主题的语言文件里面的yml文件转换为对应中文再显示</span><br><span class="line">2. 菜单链接路径：指向source下的新建的各种Page文件夹里面的index.md</span><br><span class="line">3. 菜单图标：单独设置</span><br></pre></td></tr></table></figure>
 </li>
-<li>Index.md文件使用：要<strong>严格注意空格等形式的规则</strong>，否则在hexo g不会生成public里面的同名目录下的index.html文件或者报错。</li>
-<li>hexo主题:<pre><code>1. languages文件夹：包含中文语言转换的yml文件，此yml文件还包含分类页标签页建立
-2. layout文件夹：包含大量的ejs模板文件
-3. source文件夹: 包含主题使用的js,cs,资源文件。
-</code></pre></li>
+</ul>
+</li>
+<li><p>Index.md文件使用：要<strong>严格注意空格等形式的规则</strong>，否则在hexo g不会生成public里面的同名目录下的index.html文件或者报错。</p>
+</li>
+<li>hexo主题:<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. languages文件夹：包含中文语言转换的yml文件，此yml文件还包含分类页标签页建立</span><br><span class="line">2. layout文件夹：包含大量的ejs模板文件</span><br><span class="line">3. source文件夹: 包含主题使用的js,cs,资源文件。</span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 </li>
 </ul>
@@ -536,19 +519,36 @@ git push
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-        
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half previous">
           
-            <a href="/2020/07/18/heox博客搭建/" rel="next">
+            <a href="/2020/07/18/heox博客搭建/" rel="prev">
               <div class="background">
                 <img class="lazyload" src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/MyImg/q1.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/MyImg/q1.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                hexo博客搭建</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/07/17/hello-world/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                hexo博客搭建</h3>
+                Hello World</h3>
                 <hr>
               </div>
             </a>
@@ -662,9 +662,9 @@ git push
 <script type="text/javascript">
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/skyg1/skyg1@1.2/Unbroken.mp4","name":"Unbroken.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/Nastsuki-Kaede/Blog-Resources/cover-video","name":"sugar.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 } else {
-  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/skyg1/skyg1@1.2/Unbroken.mp4","name":"Unbroken.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https://cdn.jsdelivr.net/gh/Nastsuki-Kaede/Blog-Resources/cover-video","name":"sugar.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 }
 /* ]]> */
 
@@ -710,10 +710,7 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- 雪花飘落 -->
-<script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/snow1.js"></script>
-<!--背景切换-->
-<script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+
 
 
     <div class="openNav no-select" style="height: 50px;">
@@ -876,6 +873,16 @@ $(document).ready(function() {
       </li>
     
       <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
         <a href="/donate/">
           <span class="faa-parent animated-hover">
             <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
@@ -917,6 +924,16 @@ $(document).ready(function() {
               </li>
             
           </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/client/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-android faa-vertical" aria-hidden="true"></i>
+            客户端
+          </span>
+        </a>
         
       </li>
     
@@ -999,4 +1016,8 @@ $(document).ready(function() {
   });
 </script>
 </body>
+
+<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/piao.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Natsuki-Kaede/Blog-Resources@master/live2d/autoload.js"></script>
+
 </html>
