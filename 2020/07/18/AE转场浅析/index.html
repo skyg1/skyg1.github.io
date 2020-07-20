@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">client | My Blogs</title>
+  <title itemprop="name">AE转场浅析 | My Blogs</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -411,65 +411,187 @@
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-    <div class="pattern-center ">
-      <div class="pattern-attachment-img">
-        <img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.4/img/banner/client.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
-      </div>
-      <header class="pattern-header ">
-        <h1 class="entry-title">
-        Android客户端</h1>
-      </header>
-    </div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <p>直接下载 or 扫码下载：<br>
-<div style="text-align: center;">
-<img class="lazyload" data-src="https://view.moezx.cc/images/2018/06/08/app-download.png#in-center#width-50" style="width: 200px; height: 200px;" alt>
-</div>
-</p>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
 
-      <!-- .entry-content -->
-      
-      <div class="single-reward">
-        <div class="reward-open">赏
-          <div class="reward-main">
-            <ul class="reward-row">
-              <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0undefined"></li>
-              <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/donate/WeChanQR.png"></li>
-            </ul>
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg);" src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      AE转场浅析</h1>
+      <p class="entry-census">
+        <span>
+          <a href="skyg1.github.io">
+            <img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="skyg1.github.io">YuGuang</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-7-18<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="AE转场浅析"><a href="#AE转场浅析" class="headerlink" title="AE转场浅析"></a>AE转场浅析</h1><p>##前言<br>简单2d位移转场<br>大体介绍AE自带的常使用特效(不局限于转场)<br>蒙版与形状层叠加alpha的使用<br>还有时间，通道，透视，颜色校正，音频，杂色和颗粒这些AE自带特效暂时未介绍。</p>
+<h2 id="1-位移转场-包含位置，旋转和缩放转场"><a href="#1-位移转场-包含位置，旋转和缩放转场" class="headerlink" title="1.位移转场(包含位置，旋转和缩放转场)"></a>1.位移转场(包含位置，旋转和缩放转场)</h2><ul>
+<li><1>基本都要添加<strong>动态模糊</strong>与<strong>动态拼贴</strong>(勾选镜像边缘)</1></li>
+<li><2>两个图层保持同一方向运动k关键帧，调运动速度曲线(前一个先慢后快，后一个先快后慢)来避免出现生硬过渡<blockquote>
+<p>tips:<br>这里两个图层要做一样的运动，借助空对象先绑定后镜头运动一定数值，解除绑定并将空对象运动属性清零，最后绑定两个图层一定反向运动相同的数值，达成前镜头运动出摄像机画面，而后显示镜头刚好显示到摄像机画面中。运动曲线调中快边慢。</p>
+</blockquote>
+</2></li>
+<li><3>打开运动模糊</3></li>
+<li><p><4>添加模糊特效(避免过渡生硬)：</4></p>
+<blockquote>
+<p>(1)摄像机镜头模糊<br> 模糊半径与曝光度<br> (2)径向模糊<br> (3)高斯模糊</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>总结</strong>：<br>这类转场主要用<strong>模糊</strong>来让人看不清楚，进而快速切换画面，辅助动态拼贴来避免画面穿帮。<br><strong>难点</strong>：<br>运动一致性，可以分别给两个镜头做一致变化方向的关键帧，也可借助空对象来处理运动一致。空对象处理要注意绑定与不绑定的操作用意。<br><strong>空对象特别用法</strong>：<br>绑定重置位置，空对象移动到与绑定图层同一平面中心位置（适合三维空间摄像机定位运动到某平面）</p>
+<h2 id="2-风格化转场"><a href="#2-风格化转场" class="headerlink" title="2.风格化转场"></a>2.风格化转场</h2><p><strong>CC Burn Film</strong>:模拟烧焦的效果</p>
+<p><strong>色调分离</strong>，<strong>动态拼贴</strong>，<strong>发光</strong>和<strong>查找边缘</strong>：是常使用的特效</p>
+<p><strong>毛边</strong>和<strong>闪光灯</strong>：冷门小特效修饰</p>
+<p><strong>总结</strong>：<br>除了<strong>CC Burn Film</strong>可以转场外，其余的好像都不合适。</p>
+<h2 id="3-过渡转场"><a href="#3-过渡转场" class="headerlink" title="3.过渡转场"></a>3.过渡转场</h2><p>  卡片擦除<br>  CC grid wipe</p>
+<h2 id="4-模糊转场"><a href="#4-模糊转场" class="headerlink" title="4.模糊转场"></a>4.模糊转场</h2><p> 模糊一般是搭配其他特效食用的，而对于一些模糊特效单独使用也可作为一种转场。<br> 例如：<br><strong>复合模糊</strong>：从物体部分开始模糊</p>
+<blockquote>
+<p><1>模糊强度设置关键帧动画</1></p>
+<p><2>搭配椭圆遮罩路径动画，应该会很适合做眨眼转场</2></p>
+</blockquote>
+<p><strong>快速方框模糊</strong>：从整体画面开始模糊</p>
+<p> <strong>CC Radial blur</strong>：画面旋转模糊(可微调其他模糊类型)</p>
+<blockquote>
+<p><1>前后镜头动态拼贴，放大输出宽高，勾选镜像边缘<br> <2>新建调整图层，添加CC Radial blur，设置强度关键帧动画。</2></1></p>
+</blockquote>
+<p> <strong>CC Radial Fast blur</strong>:画面缩放模糊(可微调其他模糊类型)</p>
+<blockquote>
+<p><1>直接调整层，k模糊强度关键帧动画。</1></p>
+</blockquote>
+<p><strong>径向模糊</strong>：前面两种模糊主要的旋转缩放模糊功能都能做，但它没微调功能。</p>
+<p>最后<strong>摄像机镜头模糊</strong>，<strong>定向模糊</strong>和<strong>高斯模糊</strong>是搭配其它效果使用，其中<strong>高斯模糊</strong>应该是最常使用的模糊。</p>
+<p><strong>总结</strong>：<br>除了<strong>CC Radial blur</strong>，<strong>CC Radial Fast blur</strong>和<strong>径向模糊</strong>具备扭曲模糊一体效果可单独使用外，其余的模糊还是结合具体情况搭配其它效果运动使用。</p>
+<h2 id="5-模拟转场"><a href="#5-模拟转场" class="headerlink" title="5.模拟转场"></a>5.模拟转场</h2><p>一般作用在纯色层上，也有部分直接作用于使用图层来生成物体。</p>
+<p><strong>CC Ball Action</strong>：画面变成小球消散，很适合转场哦!</p>
+<p><strong>CC Bubbles</strong>:生成运动的泡沫，不适合转场，但适合添加运动的泡沫作为点缀。</p>
+<p><strong>CC Particular system</strong>，<strong>CC Particular word</strong>和<strong>粒子运动场</strong>:这些都是AE自带的粒子系统。</p>
+<p><strong>CC Rainfall</strong>:AE自带的模拟下雨</p>
+<p><strong>CC Snowfall</strong>:AE自带的模拟下雪</p>
+<p><strong>CC Star Burst</strong>:AE自带的星星爆发运动</p>
+<p><strong>泡沫</strong>：好像比CC Bubbles高级点</p>
+<p><strong>碎片</strong>：模拟里面常用的转场特效</p>
+<p><strong>总结</strong>：<br>模拟特效里面<strong>CC Ball Action</strong>和<strong>碎片</strong>这两个常用于转场，尤其<strong>碎片</strong>的碎裂效果不错。</p>
+<h2 id="6-扭曲转场-重点"><a href="#6-扭曲转场-重点" class="headerlink" title="6.扭曲转场(重点)"></a>6.扭曲转场(重点)</h2><blockquote>
+<p>放大<br>  光学补偿<br>  cc gridler<br>  cc lens   气泡扭曲放缩<br>  cc Page Turn 书页翻转<br>  湍流置换</p>
+</blockquote>
+<h2 id="7-生成转场（一般与alpha遮罩一起使用）"><a href="#7-生成转场（一般与alpha遮罩一起使用）" class="headerlink" title="7.生成转场（一般与alpha遮罩一起使用）"></a>7.生成转场（一般与alpha遮罩一起使用）</h2><p><strong>圆形</strong>：<br><strong>椭圆形</strong>：<br><strong>CC light sweep</strong>:生成扫光<br><strong>网格</strong>：<br><strong>棋盘</strong>：<br><strong>音频频谱</strong>：<br><strong>高级闪电</strong>：</p>
+<h2 id="7-画面切割-消失-转场"><a href="#7-画面切割-消失-转场" class="headerlink" title="7.画面切割(消失)转场"></a>7.画面切割(消失)转场</h2><ol>
+<li>使用画面变化的特效（包含风格化，过渡，模糊，模拟以及扭曲）</li>
+<li>前镜头使用蒙版分割，再位移动画</li>
+<li>遮罩蒙版，做蒙版路径动画，搭配蒙版扩展和蒙版羽化</li>
+<li>创建形状图层，前镜头再添加alpha遮罩，做形状图层移动动画</li>
+</ol>
+<p><strong>总结</strong>：<br>注意蒙版使用与形状层再添加alpha遮罩使用的区别</p>
+<h2 id="8-画面遮挡-出现-转场"><a href="#8-画面遮挡-出现-转场" class="headerlink" title="8.画面遮挡(出现)转场"></a>8.画面遮挡(出现)转场</h2><p>1.使用生成特效<br>2.后面镜头直接位移遮挡画面</p>
+<h2 id="9-AE其他自带特效转场"><a href="#9-AE其他自带特效转场" class="headerlink" title="9.AE其他自带特效转场"></a>9.AE其他自带特效转场</h2><p>待完善</p>
+<h2 id="10-三维空间转场"><a href="#10-三维空间转场" class="headerlink" title="10.三维空间转场"></a>10.三维空间转场</h2><p>待完善，这部分单独讲解</p>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0undefined"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/donate/WeChanQR.png"></li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
-        </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
+		
+        
+
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
       <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/07/18/Sakura主题使用/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://lain.bgm.tv/pic/cover/l/0e/1e/218971_2y351.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Sakura主题的使用前准备</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/avatar.jpg" itemprop="image" alt="skyg1" height="70" width="70"></a>
+          <a href="skyg1.github.io" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/skyg1/cdn@2.0/img/custom/avatar.jpg" itemprop="image" alt="YuGuang" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://skyg1.github.io" itemprop="url" rel="author">skyg1</a>
+            <a href="skyg1.github.io" itemprop="url" rel="author">YuGuang</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>Live your life with passion! With some drive!</p>
+        <p><i class="iconfont icon-write"></i></p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
